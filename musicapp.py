@@ -73,7 +73,7 @@ with col1:
 with st.spinner("Loading fast dataset..."):
     df, sim_matrix = load_sample_data(max_songs)
 
-st.success(f"✅ Loaded {len(df):,} songs using {len([c for c in FEATURE_COLS if c in df.columns])} features")
+st.success(f" Loaded {len(df):,} songs using {len([c for c in FEATURE_COLS if c in df.columns])} features")
 
 songs = sorted(df["song_label"].tolist())
 selected = st.selectbox("Pick a song:", songs)
